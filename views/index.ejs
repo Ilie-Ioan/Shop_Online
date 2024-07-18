@@ -1,0 +1,61 @@
+<form>
+  <br/>
+  <% if(session.user){ %>
+      <br/>
+  <fieldset>
+      <br/>
+      <form action="/creare-bd" method="get">
+          <button onclick="window.location.href='/creare-bd'">Creare-BD</button>
+      </form>
+      <br/>
+      <br/>
+      <form action="/inserare-bd" method="get">
+          <button onclick="window.location.href='/inserare-bd'">Incarcare-BD</button>
+      </form>
+      <br/>
+      </fieldset>
+      <br/>
+  <fieldset>
+      <h4>Jocuri în stoc</h4>
+      <br/>
+      <table class="center">
+          <thead>
+          <tr>
+              <th>Id</th>
+              <th>Nume</th>
+              <th>Preț</th>
+          </tr>
+        </thead>
+        <% if(jocuri){ %>            
+          <% for (var i = 0; i < jocuri.length; i++){ %>
+              <tr>
+                  <td><%= jocuri[i].id %></td>
+                  <td><%= jocuri[i].nume %></td>
+                  <td><%= jocuri[i].pret %></td>
+                  
+                  <% if(session.user){ %>
+                      <form action="/adaugare-cos" method="POST">
+                          <td><button class="button" type = "submit" name="id" value="%=jocuri[i].id%>">Adaugă în coș</button></td>   
+                      </form>
+                  <%}else{%>
+                      <td><button disabled>Adaugă în coș</button></td>
+                  <%} %>
+              </tr>
+          <% } %>
+      <% } %>
+      </tbody>
+          
+      </table>
+  <br/>  
+  </fieldset>
+  <% } %>
+
+  <br/>
+  <% if(session.user){ %>
+    <fieldset>
+        <div class="logat_ca">
+            <p><h4> Logat ca <%- session.user -%> !<h4></p>
+        </div>   
+    </fieldset>
+    <% } %>
+</form>

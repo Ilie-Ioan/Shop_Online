@@ -1,0 +1,23 @@
+{
+    "intrebari": [
+      {
+        "intrebare": "Care este cel mai popular joc in momentul actual?",
+        "variante": [
+          "Minecraft",
+          "Fortnite",
+          "Roblox"
+        ],
+        "corect": 0
+      },
+      {
+        "intrebare": "Cine din acesti actori a fost un voice actor de succes?",
+        "variante": [
+          "Pedro Pascal",
+          "Kevin Conroy",
+          "Pepe"
+        ],
+        "corect": 1
+      }
+     
+    ]
+  }

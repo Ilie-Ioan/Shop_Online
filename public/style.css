@@ -1,0 +1,50 @@
+body{
+    background-color:#e3eaa7; 
+    }
+header{
+    width: 420;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    background-color: #333;
+    color : 
+    white;
+
+}
+@media screen and (min-width: 480px) {
+    body {
+      background-color:#e3eaa7;
+    }
+  }
+nav{
+    overflow: hidden;
+    background-color: #333;
+}
+nav a
+{
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+nav a:hover
+{
+    background-color: #ddd;
+    color: black;
+}
+nav a:active
+{
+    background-color: #ddd;
+    color: black;
+}
+table,th,td {
+    text-align: center;
+    border : 2px solid black;
+    border-collapse: collapse;
+  }
+  th,td {
+    padding: 5px;
+  }

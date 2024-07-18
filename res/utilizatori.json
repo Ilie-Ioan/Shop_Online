@@ -1,0 +1,6 @@
+[
+    { "user": "test", "pass": "test", "rol":"admin"},
+    { "user": "ioan_ilie", "pass": "123456", "rol":"user"},
+    { "user": "nofal_nadim", "pass": "654321", "rol":"user"},
+    { "user": "bejan_adrian", "pass": "987654",  "rol":"user"}
+]

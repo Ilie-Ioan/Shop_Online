@@ -1,0 +1,26 @@
+<h2>Coș de cumpărături</h2>
+<form>
+    <%if(session.user){%>
+        <fieldset>
+            <fieldset>
+                <div>            
+                    <% if(produse) {%>
+                        <table class="center">
+                            <tr>
+                                <th>Id</th>
+                                <th>Nume Bautura</th>
+                                <th>Preț</th>
+                            </tr>
+                            <% for(var produs of produse) { %>
+                                <tr>
+                                    <td><%- produs.id -%></td>
+                                    <td><%- produs.nume -%></td>
+                                    <td><%- produs.specificatii -%></td>
+                                </tr>    
+                            <%} %>
+                        </table>
+                    <% }%>        
+                </div>
+            </fieldset>
+        
+</form>

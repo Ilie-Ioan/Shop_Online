@@ -1,0 +1,12 @@
+<% if(typeof corecte !== "undefined"){ %>
+    <p>Ati raspuns corect la <%= corecte %> intrebari!</p>
+    <% } %>
+<form action="/rezultat-chestionar" method="post">
+    <% for (let i=0; i<intrebari.length; i++){ %>
+        <p><%=i+1 %>. <%= intrebari[i].intrebare %></p>
+        <% for(let j = 0; j< intrebari[i].variante.length; j++){ %>
+            <label><input type="radio" name="<%= i %>" value="<%= j %>"/><%= intrebari[i].variante[j] %></label><br />
+            <% } %>
+    <% } %>
+    <input type="submit" />
+</form>
